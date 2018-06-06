@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "4e23dacb-38a7-425a-9803-7c6d3797b76e",
+		"name": "Football_Club",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Govind Agrawal\",\n\t\"age\": \"23\",\n\t\"address\":\"624, Kormangla 8th Blcok\",\n\t\"email\":\"agrawal.govind23@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8420/api/prelogin/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"prelogin",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"agrawal.govind23@gmail.com\",\n\t\"password\":\"EB4CHBN3\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8420/api/prelogin/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"prelogin",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Footballer Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Access-Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FjdGl2ZSI6dHJ1ZSwiX2lkIjoiNWIwODYyM2VlZDE2MzQyZmE0MDBmMjhiIiwibmFtZSI6IkdvdmluZCBBZ3Jhd2FsIiwiYWdlIjoyMywiYWRkcmVzcyI6IjYyNCwgS29ybWFuZ2xhIDh0aCBCbGNvayIsImVtYWlsIjoiYWdyYXdhbC5nb3ZpbmQyM0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjIxOjM0LjQ1OVoiLCJ1cGRhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5NFoiLCJsYXN0bG9naW4iOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5M1oiLCJpYXQiOjE1MjcyNzYyNTIsImV4cCI6MTUyNzM2MjY1Mn0._nVcBrlkhB0ZLV3InAHTBk47ZQeJ1umIZsT0BH7SDEA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8420/api/v1/footballers/get?footballerId=5b084f691a3fa2da8797932a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"v1",
+						"footballers",
+						"get"
+					],
+					"query": [
+						{
+							"key": "footballerId",
+							"value": "5b084f691a3fa2da8797932a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Footballers List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Access-Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FjdGl2ZSI6dHJ1ZSwiX2lkIjoiNWIwODYyM2VlZDE2MzQyZmE0MDBmMjhiIiwibmFtZSI6IkdvdmluZCBBZ3Jhd2FsIiwiYWdlIjoyMywiYWRkcmVzcyI6IjYyNCwgS29ybWFuZ2xhIDh0aCBCbGNvayIsImVtYWlsIjoiYWdyYXdhbC5nb3ZpbmQyM0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjIxOjM0LjQ1OVoiLCJ1cGRhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5NFoiLCJsYXN0bG9naW4iOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5M1oiLCJpYXQiOjE1MjcyNzYyNTIsImV4cCI6MTUyNzM2MjY1Mn0._nVcBrlkhB0ZLV3InAHTBk47ZQeJ1umIZsT0BH7SDEA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8420/api/v1/footballers/list?skip=10&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"v1",
+						"footballers",
+						"list"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "10"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Access-Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FjdGl2ZSI6dHJ1ZSwiX2lkIjoiNWIwODYyM2VlZDE2MzQyZmE0MDBmMjhiIiwibmFtZSI6IkdvdmluZCBBZ3Jhd2FsIiwiYWdlIjoyMywiYWRkcmVzcyI6IjYyNCwgS29ybWFuZ2xhIDh0aCBCbGNvayIsImVtYWlsIjoiYWdyYXdhbC5nb3ZpbmQyM0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjIxOjM0LjQ1OVoiLCJ1cGRhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5NFoiLCJsYXN0bG9naW4iOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5M1oiLCJpYXQiOjE1MjcyNzYyNTIsImV4cCI6MTUyNzM2MjY1Mn0._nVcBrlkhB0ZLV3InAHTBk47ZQeJ1umIZsT0BH7SDEA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8420/api/v1/footballers/category/search?skip=0&limit=2&orderBy=Name&orderType=-1&category=Club&text=Real Madrid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"v1",
+						"footballers",
+						"category",
+						"search"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "orderBy",
+							"value": "Name"
+						},
+						{
+							"key": "orderType",
+							"value": "-1"
+						},
+						{
+							"key": "category",
+							"value": "Club"
+						},
+						{
+							"key": "text",
+							"value": "Real Madrid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Advance Search ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Access-Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FjdGl2ZSI6dHJ1ZSwiX2lkIjoiNWIwODYyM2VlZDE2MzQyZmE0MDBmMjhiIiwibmFtZSI6IkdvdmluZCBBZ3Jhd2FsIiwiYWdlIjoyMywiYWRkcmVzcyI6IjYyNCwgS29ybWFuZ2xhIDh0aCBCbGNvayIsImVtYWlsIjoiYWdyYXdhbC5nb3ZpbmQyM0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjIxOjM0LjQ1OVoiLCJ1cGRhdGVkQXQiOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5NFoiLCJsYXN0bG9naW4iOiIyMDE4LTA1LTI1VDE5OjI0OjExLjg5M1oiLCJpYXQiOjE1MjcyNzYyNTIsImV4cCI6MTUyNzM2MjY1Mn0._nVcBrlkhB0ZLV3InAHTBk47ZQeJ1umIZsT0BH7SDEA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8420/api/v1/footballers/advance/search?skip=0&limit=10&orderType=1&National_Position=CM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8420",
+					"path": [
+						"api",
+						"v1",
+						"footballers",
+						"advance",
+						"search"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "orderType",
+							"value": "1"
+						},
+						{
+							"key": "National_Position",
+							"value": "CM"
+						},
+						{
+							"key": "National_Kit",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "Club_Position",
+							"value": "Sub",
+							"disabled": true
+						},
+						{
+							"key": "Club_Kit",
+							"value": "21",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
